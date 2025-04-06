@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "72655689615",
+    "project_id": "farmzo-1",
+    "storage_bucket": "farmzo-1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:72655689615:android:55edee4ab4579b34cb5dfa",
+        "android_client_info": {
+          "package_name": "com.example.farmzo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "72655689615-5a5ir1begs3gnbil6btafgt691354r2b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.farmzo",
+            "certificate_hash": "f7488e952bccd748a8506fc1965181c577f67d2f"
+          }
+        },
+        {
+          "client_id": "72655689615-hghkid9ofut3tiendtc6vr021ohi4hnt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDP3D1iW0x66cL6q21A3AzfCQNsXrxx6D8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "72655689615-hghkid9ofut3tiendtc6vr021ohi4hnt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "72655689615-jj9fsiao90opffsebdc9uiq22tm02tpj.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.farmzo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

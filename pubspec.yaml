@@ -1,0 +1,99 @@
+name: farmzo
+description: A genuine farming app
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.0.5 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_iconly: ^1.0.2
+  google_fonts: ^5.1.0
+  firebase_core: ^3.8.1
+  firebase_auth: ^5.3.4
+  shared_preferences: ^2.3.3
+  cloud_firestore: ^5.6.0
+  firebase_database: ^11.2.0
+  http: ^1.3.0
+  url_launcher: ^6.3.1
+  lottie: ^2.7.0
+  intl: ^0.20.2
+  line_chart: ^1.1.11 
+  cached_network_image: ^3.4.1
+  smooth_page_indicator: ^1.2.1
+
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.2
+  flutter_launcher_icons: ^0.14.3
+
+flutter_icons:
+    android: true
+    ios: true
+    image_path: "assets/images/farmzo_app_logo.jpg"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+  - assets/images/farmzo_app_logo.jpg
+  - assets/images/farmzo_app_logo_modified.png
+  - assets/images/default.png
+  - assets/ads/ad1.png
+  - assets/ads/ad2.png
+  - assets/ads/ad3.png
+  - assets/ads/ad4.jpg
+  - assets/images/splash_background.jpg
+  - assets/images/farm_illustration.png
+  - assets/images/app_logo.jpg
+  - assets/images/leaf_pattern.jpg
+  - assets/images/fruits/apple.png
+  - assets/images/fruits/banana.png
+  - assets/images/fruits/mango.png
+  - assets/images/fruits/guava.png
+  - assets/images/fruits/blackgrapes.png
+  - assets/images/fruits/greengrapes.png
+  - assets/images/fruits/orange.png
+  - assets/images/fruits/papaya.jpg
+  - assets/images/fruits/pineapple.jpg
+  - assets/images/fruits/pomegranate.jpg
+  - assets/images/fruits/watermelon.jpg
+  - assets/images/fruits/muskmelon.jpg
+  - assets/images/fruits/coconut.jpg
+  - assets/images/fruits/jackfruit.jpg
+  - assets/images/fruits/chikoo.jpg
+  - assets/images/fruits/litchi.jpg
+  - assets/images/fruits/custardapple.jpg
+  - assets/images/fruits/tamarind.jpg
+  - assets/images/fruits/amla.png
+  - assets/images/fruits/fig.jpg
+  - assets/images/fruits/starfruit.jpg
+  - assets/images/fruits/jamun.jpg
+  - assets/images/fruits/ber.jpg
+  - assets/images/fruits/strawberry.jpg
+  - assets/images/fruits/kiwi.jpg
+  - assets/images/fruits/bael.jpg
+  - assets/images/vegetables/tomato.png
+  - assets/images/vegetables/potato.png
+  - assets/images/vegetables/onion.png
+  - assets/images/vegetables/carrot.png
+  - assets/images/vegetables/cabbage.png
+  - assets/images/vegetables/spinach.png
+  - assets/images/vegetables/pumpkin.png
+  - assets/images/vegetables/broccoli.png
+  - assets/images/vegetables/green_chilli.png
+  - assets/images/vegetables/cluster_beans.png
+  - assets/images/vegetables/brinjal.png
+  - assets/images/vegetables/cauliflower.png
+  - assets/images/vegetables/amaranthus.png
+  - assets/images/vegetables/beans.png
+  - assets/images/vegetables/beetroot.png
+  - assets/images/vegetables/betal_leaves.png
+
+
+
+
