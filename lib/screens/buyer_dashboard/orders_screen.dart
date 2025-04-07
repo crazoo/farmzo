@@ -64,10 +64,12 @@ class _OrdersScreenState extends State<OrdersScreen> {
         print("✅ Order found: ${doc.id}");
       }
 
-      setState(() {
-        _orders = userOrders;
-        _isLoading = false;
-      });
+      if (mounted) {
+        setState(() {
+          _orders = userOrders;
+          _isLoading = false;
+        });
+      }
 
       if (_orders.isEmpty) {
         print("❌ No orders found for mobile: $mobileNumber.");
@@ -77,9 +79,11 @@ class _OrdersScreenState extends State<OrdersScreen> {
     } catch (e, stackTrace) {
       print("⚠️ Error fetching orders: $e");
       print(stackTrace);
-      setState(() {
-        _isLoading = false;
-      });
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
     }
   }
 
@@ -91,10 +95,12 @@ class _OrdersScreenState extends State<OrdersScreen> {
       lastDate: DateTime.now(),
     );
     if (picked != null && picked.toLocal() != DateTime.parse(_selectedDate)) {
-      setState(() {
-        _selectedDate = DateFormat('yyyy-MM-dd').format(picked);
-        _isLoading = true; // Show loading indicator while fetching
-      });
+      if (mounted) {
+        setState(() {
+          _selectedDate = DateFormat('yyyy-MM-dd').format(picked);
+          _isLoading = true; // Show loading indicator while fetching
+        });
+      }
       await _fetchOrders(); // Fetch orders for the selected date
     }
   }

@@ -39,23 +39,25 @@ class _BuyerProfileScreenState extends State<BuyerProfileScreen> {
       DocumentSnapshot doc =
           await _firestore.collection('buyers').doc(user.phoneNumber).get();
       if (doc.exists) {
-        setState(() {
-          buyerData = doc.data() as Map<String, dynamic>;
-          isLoading = false;
+        if (mounted) {
+          setState(() {
+            buyerData = doc.data() as Map<String, dynamic>;
+            isLoading = false;
 
-          nameController.text = buyerData['name'] ?? '';
-          phoneController.text = buyerData['phone'] ?? '';
-          emailController.text = buyerData['email'] ?? '';
-          addressController.text = buyerData['address'] ?? '';
-          pincodeController.text = buyerData['pincode'] ?? '';
-          stateController.text = buyerData['state'] ?? '';
-          districtController.text = buyerData['district'] ?? '';
-          marketController.text = buyerData['market'] ?? '';
-        });
-      } else {
-        setState(() {
-          isLoading = false;
-        });
+            nameController.text = buyerData['name'] ?? '';
+            phoneController.text = buyerData['phone'] ?? '';
+            emailController.text = buyerData['email'] ?? '';
+            addressController.text = buyerData['address'] ?? '';
+            pincodeController.text = buyerData['pincode'] ?? '';
+            stateController.text = buyerData['state'] ?? '';
+            districtController.text = buyerData['district'] ?? '';
+            marketController.text = buyerData['market'] ?? '';
+          });
+        } else {
+          setState(() {
+            isLoading = false;
+          });
+        }
       }
     }
   }
@@ -67,9 +69,11 @@ class _BuyerProfileScreenState extends State<BuyerProfileScreen> {
       await _firestore.collection('buyers').doc(user.phoneNumber).update({
         field: value,
       });
-      setState(() {
-        buyerData[field] = value;
-      });
+      if (mounted) {
+        setState(() {
+          buyerData[field] = value;
+        });
+      }
     }
   }
 

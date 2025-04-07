@@ -17,50 +17,54 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final Map<String, String> produceImages = {
-    "Apple": "assets/images/fruits/apple.png",
-    "Banana": "assets/images/fruits/banana.png",
-    "Banana - Green": "assets/images/fruits/banana.png",
-    "Mango": "assets/images/fruits/mango.png",
-    "Tomato": "assets/images/vegetables/tomato.png",
-    "Potato": "assets/images/vegetables/potato.png",
-    "Black Grapes": "assets/images/fruits/blackgrapes.png",
-    "Green Grapes": "assets/images/fruits/greengrapes.png",
-    "Guava": "assets/images/fruits/guava.png",
-    "Orange": "assets/images/fruits/orange.png",
-    "Papaya": "assets/images/fruits/papaya.jpg",
-    "Pineapple": "assets/images/fruits/pineapple.jpg",
-    "Pomegranate": "assets/images/fruits/pomegranate.jpg",
-    "Water Melon": "assets/images/fruits/watermelon.jpg",
-    "Muskmelon": "assets/images/fruits/muskmelon.jpg",
-    "Coconut": "assets/images/fruits/coconut.jpg",
-    "Jackfruit": "assets/images/fruits/jackfruit.jpg",
-    "Chikoo": "assets/images/fruits/chikoo.jpg",
-    "Litchi": "assets/images/fruits/litchi.jpg",
-    "Custard Apple": "assets/images/fruits/custardapple.jpg",
-    "Tamarind": "assets/images/fruits/tamarind.jpg",
-    "Amla": "assets/images/fruits/amla.png",
-    "Amla(Nelli Kai)": "assets/images/fruits/amla.png",
-    "Fig": "assets/images/fruits/fig.jpg",
-    "Starfruit": "assets/images/fruits/starfruit.jpg",
-    "Jamun": "assets/images/fruits/jamun.jpg",
-    "Ber": "assets/images/fruits/ber.jpg",
-    "Strawberry": "assets/images/fruits/strawberry.jpg",
-    "Kiwi": "assets/images/fruits/kiwi.jpg",
-    "Bael": "assets/images/fruits/bael.jpg",
-    "Carrot": "assets/images/vegetables/carrot.png",
-    "Spinach": "assets/images/vegetables/spinach.png",
-    "Green Chilli": "assets/images/vegetables/green_chilli.png",
-    "Cabbage": "assets/images/vegetables/cabbage.png",
-    "Cluster beans": "assets/images/vegetables/cluster_beans.png",
-    "Brinjal": "assets/images/vegetables/brinjal.png",
-    "Cauliflower": "assets/images/vegetables/cauliflower.png",
-    "Onion": "assets/images/vegetables/onion.png",
-    "Amaranthus": "assets/images/vegetables/amaranthus.png",
-    "Beans": "assets/images/vegetables/beans.png",
-    "Beetroot": "assets/images/vegetables/beetroot.png",
-    "Betal Leaves": "assets/images/vegetables/betal_leaves.png",
+    "Apple": "https://farmzoassets.crazoo.me/fruits/apple.png",
+    "Banana": "https://farmzoassets.crazoo.me/fruits/banana.png",
+    "Banana - Green": "https://farmzoassets.crazoo.me/fruits/banana.png",
+    "Mango": "https://farmzoassets.crazoo.me/fruits/mango.png",
+    "Tomato": "https://farmzoassets.crazoo.me/vegetables/tomato.png",
+    "Potato": "https://farmzoassets.crazoo.me/vegetables/potato.png",
+    "Black Grapes": "https://farmzoassets.crazoo.me/fruits/blackgrapes.png",
+    "Green Grapes": "https://farmzoassets.crazoo.me/fruits/greengrapes.png",
+    "Guava": "https://farmzoassets.crazoo.me/fruits/guava.png",
+    "Orange": "https://farmzoassets.crazoo.me/fruits/orange.png",
+    "Papaya": "https://farmzoassets.crazoo.me/fruits/papaya.jpg",
+    "Pineapple": "https://farmzoassets.crazoo.me/fruits/pineapple.jpg",
+    "Pomegranate": "https://farmzoassets.crazoo.me/fruits/pomegranate.jpg",
+    "Water Melon": "https://farmzoassets.crazoo.me/fruits/watermelon.jpg",
+    "Muskmelon": "https://farmzoassets.crazoo.me/fruits/muskmelon.jpg",
+    "Coconut": "https://farmzoassets.crazoo.me/fruits/coconut.jpg",
+    "Jackfruit": "https://farmzoassets.crazoo.me/fruits/jackfruit.jpg",
+    "Chikoo": "https://farmzoassets.crazoo.me/fruits/chikoo.jpg",
+    "Litchi": "https://farmzoassets.crazoo.me/fruits/litchi.jpg",
+    "Custard Apple": "https://farmzoassets.crazoo.me/fruits/custardapple.jpg",
+    "Tamarind": "https://farmzoassets.crazoo.me/fruits/tamarind.jpg",
+    "Amla": "https://farmzoassets.crazoo.me/fruits/amla.png",
+    "Amla(Nelli Kai)": "https://farmzoassets.crazoo.me/fruits/amla.png",
+    "Fig": "https://farmzoassets.crazoo.me/fruits/fig.jpg",
+    "Starfruit": "https://farmzoassets.crazoo.me/fruits/starfruit.jpg",
+    "Jamun": "https://farmzoassets.crazoo.me/fruits/jamun.jpg",
+    "Ber": "https://farmzoassets.crazoo.me/fruits/ber.jpg",
+    "Strawberry": "https://farmzoassets.crazoo.me/fruits/strawberry.jpg",
+    "Kiwi": "https://farmzoassets.crazoo.me/fruits/kiwi.jpg",
+    "Bael": "https://farmzoassets.crazoo.me/fruits/bael.jpg",
+    "Carrot": "https://farmzoassets.crazoo.me/vegetables/carrot.png",
+    "Spinach": "https://farmzoassets.crazoo.me/vegetables/spinach.png",
+    "Green Chilli":
+        "https://farmzoassets.crazoo.me/vegetables/green_chilli.png",
+    "Cabbage": "https://farmzoassets.crazoo.me/vegetables/cabbage.png",
+    "Cluster beans":
+        "https://farmzoassets.crazoo.me/vegetables/cluster_beans.png",
+    "Brinjal": "https://farmzoassets.crazoo.me/vegetables/brinjal.png",
+    "Cauliflower": "https://farmzoassets.crazoo.me/vegetables/cauliflower.png",
+    "Onion": "https://farmzoassets.crazoo.me/vegetables/onion.png",
+    "Amaranthus": "https://farmzoassets.crazoo.me/vegetables/amaranthus.png",
+    "Beans": "https://farmzoassets.crazoo.me/vegetables/beans.png",
+    "Beetroot": "https://farmzoassets.crazoo.me/vegetables/beetroot.png",
+    "Betal Leaves":
+        "https://farmzoassets.crazoo.me/vegetables/betal_leaves.png",
   };
 
+// https://farmzoassets.crazoo.me/fruits/amla.png
   Map<String, double> livePrices = {};
   List<Map<String, dynamic>> selectedItems = [];
 
@@ -87,24 +91,32 @@ class _HomeScreenState extends State<HomeScreen> {
             farmerDoc.data() as Map<String, dynamic>;
         print("Farmer Data: $farmerData");
 
-        setState(() {
-          state = farmerData['state'] ?? "";
-          district = farmerData['district'] ?? "";
-          market = farmerData['market'] ?? "";
-        });
+        if (mounted) {
+          setState(() {
+            state = farmerData['state'] ?? "";
+            district = farmerData['district'] ?? "";
+            market = farmerData['market'] ?? "";
+          });
+        }
 
         if (state.isNotEmpty && district.isNotEmpty && market.isNotEmpty) {
           _fetchLivePrices();
         } else {
-          setState(() => isLoading = false);
+          if (mounted) {
+            setState(() => isLoading = false);
+          }
         }
       } else {
         print("Farmer document does not exist.");
-        setState(() => isLoading = false);
+        if (mounted) {
+          setState(() => isLoading = false);
+        }
       }
     } catch (e) {
       print("Error fetching farmer profile: $e");
-      setState(() => isLoading = false);
+      if (mounted) {
+        setState(() => isLoading = false);
+      }
     }
   }
 
@@ -206,9 +218,11 @@ class _HomeScreenState extends State<HomeScreen> {
       }
     }, SetOptions(merge: true));
 
-    setState(() {
-      selectedItems.add(item);
-    });
+    if (mounted) {
+      setState(() {
+        selectedItems.add(item);
+      });
+    }
 
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(content: Text("${item['name']} added for selling")),
@@ -309,44 +323,67 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(height: 10),
 
                   // 🔹 Auto-Sliding Advertisement Banners
-                  SizedBox(
-                    height: 160,
-                    child: PageView.builder(
-                      controller: _pageController,
-                      itemCount: adImages.length,
-                      physics:
-                          const BouncingScrollPhysics(), // 🔹 Smooth scrolling
-                      pageSnapping: true, // 🔹 Ensures proper page snapping
-                      onPageChanged: (index) {
-                        setState(() {
-                          _currentPage = index;
-                        });
-                      },
-                      itemBuilder: (context, index) {
-                        return AnimatedBuilder(
-                          animation: _pageController,
-                          builder: (context, child) {
-                            return Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 13),
-                              child: GestureDetector(
-                                onTap: () => _launchURL(adImages[
-                                    index]), // Call _launchURL function on tap
-                                child: ClipRRect(
-                                  borderRadius: BorderRadius.circular(15),
-                                  child: Image.network(
-                                    adImages[
-                                        index], // Change this to load images from URLs
-                                    fit: BoxFit.cover,
-                                    width: double.infinity,
+
+// Inside your build method:
+                  Column(
+                    children: [
+                      SizedBox(
+                        height: 160,
+                        child: PageView.builder(
+                          controller: _pageController,
+                          itemCount: adImages.length,
+                          physics: const BouncingScrollPhysics(),
+                          pageSnapping: true,
+                          onPageChanged: (index) {
+                            if (mounted) {
+                              setState(() {
+                                _currentPage = index;
+                              });
+                            }
+                          },
+                          itemBuilder: (context, index) {
+                            return AnimatedBuilder(
+                              animation: _pageController,
+                              builder: (context, child) {
+                                return Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 13),
+                                  child: GestureDetector(
+                                    onTap: () => _launchURL(adImages[index]),
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(15),
+                                      child: Image.network(
+                                        adImages[index],
+                                        fit: BoxFit.cover,
+                                        width: double.infinity,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ),
+                                );
+                              },
                             );
                           },
-                        );
-                      },
-                    ),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(adImages.length, (index) {
+                          return AnimatedContainer(
+                            duration: const Duration(milliseconds: 300),
+                            margin: const EdgeInsets.symmetric(horizontal: 4),
+                            width: _currentPage == index ? 16 : 8,
+                            height: 8,
+                            decoration: BoxDecoration(
+                              color: _currentPage == index
+                                  ? Colors.green
+                                  : Colors.grey.shade400,
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                          );
+                        }),
+                      ),
+                    ],
                   ),
 
                   const SizedBox(height: 12),
@@ -408,18 +445,16 @@ class _HomeScreenState extends State<HomeScreen> {
                                   produce,
                                   produceImages.containsKey(produce)
                                       ? produceImages[produce]!
-                                      : "assets/images/default.png",
+                                      : "https://farmzoassets.crazoo.me/default.png",
                                   price),
                               child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.asset(
-                                  produceImages.containsKey(produce)
-                                      ? produceImages[produce]!
-                                      : "assets/images/default.png",
-                                  height: 90,
-                                  fit: BoxFit.contain,
-                                ),
-                              ),
+                                  borderRadius: BorderRadius.circular(12),
+                                  child: Image.network(
+                                    produceImages[produce] ??
+                                        'https://farmzoassets.crazoo.me/default.png',
+                                    fit: BoxFit.contain,
+                                    height: 90,
+                                  )),
                             ),
 
                             const SizedBox(height: 12),
@@ -445,7 +480,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   produce,
                                   produceImages.containsKey(produce)
                                       ? produceImages[produce]!
-                                      : "assets/images/default.png",
+                                      : "https://farmzoassets.crazoo.me/default.png",
                                   price),
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 4),
@@ -498,20 +533,23 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     _fetchFarmerProfile();
-
     _pageController = PageController(initialPage: 0);
 
-    // Auto-slide ads every 5 seconds with a smooth transition
-    Timer.periodic(const Duration(seconds: 5), (Timer timer) {
-      if (!mounted) return;
+    // Wait until the first frame is rendered
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Timer.periodic(const Duration(seconds: 5), (Timer timer) {
+        if (!mounted) return;
+        if (!_pageController.hasClients) return;
 
-      final nextPage = (_pageController.page!.toInt() + 1) % adImages.length;
+        final nextPage =
+            (_pageController.page?.toInt() ?? 0 + 1) % adImages.length;
 
-      _pageController.animateToPage(
-        nextPage,
-        duration: const Duration(milliseconds: 600), // 🔹 Smoother transition
-        curve: Curves.easeInOutCubic, // 🔹 More fluid effect
-      );
+        _pageController.animateToPage(
+          nextPage,
+          duration: const Duration(milliseconds: 600),
+          curve: Curves.easeInOutCubic,
+        );
+      });
     });
   }
 
@@ -524,10 +562,10 @@ class _HomeScreenState extends State<HomeScreen> {
   late PageController _pageController = PageController(initialPage: 0);
   int _currentPage = 0;
   List<String> adImages = [
-    "https://farmzo.crazoo.me/ad1.png",
-    "https://farmzo.crazoo.me/ad2.png",
-    "https://farmzo.crazoo.me/ad3.png",
-    "https://farmzo.crazoo.me/ad4.png",
+    "https://farmzoassets.crazoo.me/ad1.png",
+    "https://farmzoassets.crazoo.me/ad2.png",
+    "https://farmzoassets.crazoo.me/ad3.png",
+    "https://farmzoassets.crazoo.me/ad4.png",
   ];
   List<String> adLinks = [
     "https://www.example.com/1", // Link for Image 1
@@ -592,7 +630,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               0.8, // Adjust width dynamically
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(12),
-                            child: Image.asset(
+                            child: Image.network(
                               image,
                               fit: BoxFit
                                   .contain, // Ensures full image is visible without cropping

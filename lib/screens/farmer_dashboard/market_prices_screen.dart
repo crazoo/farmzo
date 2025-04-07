@@ -224,8 +224,10 @@ class _MarketPricesScreenState extends State<MarketPricesScreen> {
   }
 
   Future<void> _storePricesToFirestore() async {
-    // ✅ Format today's date to match API date format
-    String todayDate = DateFormat("dd/MM/yyyy").format(DateTime.now());
+    // ✅ Today's and Yesterday's date in "yyyy-MM-dd" format
+    String todayDate = DateFormat("yyyy-MM-dd").format(DateTime.now());
+    String yesterdayDate = DateFormat("yyyy-MM-dd")
+        .format(DateTime.now().subtract(Duration(days: 1)));
 
     for (var item in prices) {
       String marketName = item['market'] ?? "";
@@ -237,18 +239,16 @@ class _MarketPricesScreenState extends State<MarketPricesScreen> {
         continue;
       }
 
-      // ✅ Convert API arrival date from "dd/MM/yyyy" to "yyyy-MM-dd"
+      // ✅ Parse API arrival date from "dd/MM/yyyy" to "yyyy-MM-dd"
       DateTime parsedArrivalDate = DateFormat("dd/MM/yyyy").parse(arrivalDate);
       String formattedArrivalDate =
           DateFormat("yyyy-MM-dd").format(parsedArrivalDate);
 
-      // ✅ Ensure both dates use "yyyy-MM-dd" format
-      String expectedTodayDate =
-          DateFormat("yyyy-MM-dd").format(DateTime.now());
-
-      if (formattedArrivalDate != expectedTodayDate) {
+      // ✅ Allow if arrivalDate is today or yesterday
+      if (formattedArrivalDate != todayDate &&
+          formattedArrivalDate != yesterdayDate) {
         print(
-            "⚠️ Skipping $commodity (Arrival Date: $formattedArrivalDate ≠ Today: $expectedTodayDate)");
+            "⚠️ Skipping $commodity (Arrival Date: $formattedArrivalDate ≠ Today/Yesterday)");
         continue;
       }
 
@@ -257,9 +257,10 @@ class _MarketPricesScreenState extends State<MarketPricesScreen> {
       double modalPrice =
           (double.tryParse(item['modal_price'] ?? "0") ?? 0) / 100;
 
+      // ✅ Store using the actual arrival date
       DocumentReference docRef = FirebaseFirestore.instance
           .collection('market_prices')
-          .doc(expectedTodayDate) // ✅ Now both match
+          .doc(formattedArrivalDate) // dynamic date: today or yesterday
           .collection(state)
           .doc(district)
           .collection(marketName)
@@ -273,7 +274,7 @@ class _MarketPricesScreenState extends State<MarketPricesScreen> {
             'min_price': minPrice,
             'max_price': maxPrice,
             'modal_price': modalPrice,
-            'arrival_date': formattedArrivalDate, // ✅ Store consistent format
+            'arrival_date': formattedArrivalDate,
             'variety': item['variety'] ?? "Unknown",
             'timestamp': FieldValue.serverTimestamp(),
           });

@@ -25,44 +25,51 @@ class _HomeScreenState extends State<HomeScreen> {
   List<String> availableMarkets = [];
 
   final Map<String, String> produceImages = {
-    "Apple": "assets/images/fruits/apple.png",
-    "Banana": "assets/images/fruits/banana.png",
-    "Banana - Green": "assets/images/fruits/banana.png",
-    "Mango": "assets/images/fruits/mango.png",
-    "Tomato": "assets/images/vegetables/tomato.png",
-    "Potato": "assets/images/vegetables/potato.png",
-    "name": "Black Grapes",
-    "image": "assets/images/fruits/blackgrapes.png",
-    "Green Grapes": "assets/images/fruits/greengrapes.png",
-    "Guava": "assets/images/fruits/guava.png",
-    "Orange": "assets/images/fruits/orange.png",
-    "Papaya": "assets/images/fruits/papaya.jpg",
-    "Pineapple": "assets/images/fruits/pineapple.jpg",
-    "Pomegranate": "assets/images/fruits/pomegranate.jpg",
-    "Water Melon": "assets/images/fruits/watermelon.jpg",
-    "Muskmelon": "assets/images/fruits/muskmelon.jpg",
-    "Coconut": "assets/images/fruits/coconut.jpg",
-    "Jackfruit": "assets/images/fruits/jackfruit.jpg",
-    "Chikoo": "assets/images/fruits/chikoo.jpg",
-    "Litchi": "assets/images/fruits/litchi.jpg",
-    "Custard Apple": "assets/images/fruits/custardapple.jpg",
-    "Tamarind": "assets/images/fruits/tamarind.jpg",
-    "Amla": "assets/images/fruits/amla.jpg",
-    "Fig": "assets/images/fruits/fig.jpg",
-    "Starfruit": "assets/images/fruits/starfruit.jpg",
-    "Jamun": "assets/images/fruits/jamun.jpg",
-    "Ber": "assets/images/fruits/ber.jpg",
-    "Strawberry": "assets/images/fruits/strawberry.jpg",
-    "Kiwi": "assets/images/fruits/kiwi.jpg",
-    "Bael": "assets/images/fruits/bael.jpg",
-    "Carrot": "assets/images/vegetables/carrot.png",
-    "Spinach": "assets/images/vegetables/spinach.png",
-    "Green Chilli": "assets/images/vegetables/green_chilli.png",
-    "Cabbage": "assets/images/vegetables/cabbage.png",
-    "Cluster beans": "assets/images/vegetables/cluster_beans.png",
-    "Brinjal": "assets/images/vegetables/brinjal.png",
-    "Cauliflower": "assets/images/vegetables/cauliflower.png",
-    "Onion": "assets/images/vegetables/onion.png",
+    "Apple": "https://farmzoassets.crazoo.me/fruits/apple.png",
+    "Banana": "https://farmzoassets.crazoo.me/fruits/banana.png",
+    "Banana - Green": "https://farmzoassets.crazoo.me/fruits/banana.png",
+    "Mango": "https://farmzoassets.crazoo.me/fruits/mango.png",
+    "Tomato": "https://farmzoassets.crazoo.me/vegetables/tomato.png",
+    "Potato": "https://farmzoassets.crazoo.me/vegetables/potato.png",
+    "Black Grapes": "https://farmzoassets.crazoo.me/fruits/blackgrapes.png",
+    "Green Grapes": "https://farmzoassets.crazoo.me/fruits/greengrapes.png",
+    "Guava": "https://farmzoassets.crazoo.me/fruits/guava.png",
+    "Orange": "https://farmzoassets.crazoo.me/fruits/orange.png",
+    "Papaya": "https://farmzoassets.crazoo.me/fruits/papaya.jpg",
+    "Pineapple": "https://farmzoassets.crazoo.me/fruits/pineapple.jpg",
+    "Pomegranate": "https://farmzoassets.crazoo.me/fruits/pomegranate.jpg",
+    "Water Melon": "https://farmzoassets.crazoo.me/fruits/watermelon.jpg",
+    "Muskmelon": "https://farmzoassets.crazoo.me/fruits/muskmelon.jpg",
+    "Coconut": "https://farmzoassets.crazoo.me/fruits/coconut.jpg",
+    "Jackfruit": "https://farmzoassets.crazoo.me/fruits/jackfruit.jpg",
+    "Chikoo": "https://farmzoassets.crazoo.me/fruits/chikoo.jpg",
+    "Litchi": "https://farmzoassets.crazoo.me/fruits/litchi.jpg",
+    "Custard Apple": "https://farmzoassets.crazoo.me/fruits/custardapple.jpg",
+    "Tamarind": "https://farmzoassets.crazoo.me/fruits/tamarind.jpg",
+    "Amla": "https://farmzoassets.crazoo.me/fruits/amla.png",
+    "Amla(Nelli Kai)": "https://farmzoassets.crazoo.me/fruits/amla.png",
+    "Fig": "https://farmzoassets.crazoo.me/fruits/fig.jpg",
+    "Starfruit": "https://farmzoassets.crazoo.me/fruits/starfruit.jpg",
+    "Jamun": "https://farmzoassets.crazoo.me/fruits/jamun.jpg",
+    "Ber": "https://farmzoassets.crazoo.me/fruits/ber.jpg",
+    "Strawberry": "https://farmzoassets.crazoo.me/fruits/strawberry.jpg",
+    "Kiwi": "https://farmzoassets.crazoo.me/fruits/kiwi.jpg",
+    "Bael": "https://farmzoassets.crazoo.me/fruits/bael.jpg",
+    "Carrot": "https://farmzoassets.crazoo.me/vegetables/carrot.png",
+    "Spinach": "https://farmzoassets.crazoo.me/vegetables/spinach.png",
+    "Green Chilli":
+        "https://farmzoassets.crazoo.me/vegetables/green_chilli.png",
+    "Cabbage": "https://farmzoassets.crazoo.me/vegetables/cabbage.png",
+    "Cluster beans":
+        "https://farmzoassets.crazoo.me/vegetables/cluster_beans.png",
+    "Brinjal": "https://farmzoassets.crazoo.me/vegetables/brinjal.png",
+    "Cauliflower": "https://farmzoassets.crazoo.me/vegetables/cauliflower.png",
+    "Onion": "https://farmzoassets.crazoo.me/vegetables/onion.png",
+    "Amaranthus": "https://farmzoassets.crazoo.me/vegetables/amaranthus.png",
+    "Beans": "https://farmzoassets.crazoo.me/vegetables/beans.png",
+    "Beetroot": "https://farmzoassets.crazoo.me/vegetables/beetroot.png",
+    "Betal Leaves":
+        "https://farmzoassets.crazoo.me/vegetables/betal_leaves.png",
   };
 
   @override
@@ -83,11 +90,13 @@ class _HomeScreenState extends State<HomeScreen> {
       if (doc.exists) {
         var data = doc.data() as Map<String, dynamic>?;
 
-        setState(() {
-          district = data?['district'] ?? "";
-          state = data?['state'] ?? "";
-          market = data?['market'] ?? "";
-        });
+        if (mounted) {
+          setState(() {
+            district = data?['district'] ?? "";
+            state = data?['state'] ?? "";
+            market = data?['market'] ?? "";
+          });
+        }
 
         if (state.isNotEmpty && district.isNotEmpty) {
           _fetchMarkets();
@@ -122,9 +131,11 @@ class _HomeScreenState extends State<HomeScreen> {
           List<String> fetchedMarkets =
               List<String>.from(data['available_markets']);
 
-          setState(() {
-            availableMarkets = fetchedMarkets;
-          });
+          if (mounted) {
+            setState(() {
+              availableMarkets = fetchedMarkets;
+            });
+          }
 
           if (!availableMarkets.contains(market) &&
               availableMarkets.isNotEmpty) {
@@ -147,10 +158,12 @@ class _HomeScreenState extends State<HomeScreen> {
           .doc(user.phoneNumber)
           .update({'market': selectedMarket});
 
-      setState(() {
-        market = selectedMarket;
-        isLoading = true;
-      });
+      if (mounted) {
+        setState(() {
+          market = selectedMarket;
+          isLoading = true;
+        });
+      }
 
       print("✅ Market updated: $market");
 
@@ -160,9 +173,11 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _fetchMarketPrices() async {
     if (market.isEmpty) {
-      setState(() {
-        isLoading = false;
-      });
+      if (mounted) {
+        setState(() {
+          isLoading = false;
+        });
+      }
       return;
     }
 
@@ -192,9 +207,11 @@ class _HomeScreenState extends State<HomeScreen> {
       if (pricesLoaded) break; // Exit the loop if prices are loaded
     }
 
-    setState(() {
-      isLoading = false;
-    });
+    if (mounted) {
+      setState(() {
+        isLoading = false;
+      });
+    }
   }
 
   Future<bool> _fetchPricesForDate(String date) async {
@@ -219,10 +236,12 @@ class _HomeScreenState extends State<HomeScreen> {
           };
         }
 
-        setState(() {
-          producePrices = fetchedPrices;
-          dataDate = date;
-        });
+        if (mounted) {
+          setState(() {
+            producePrices = fetchedPrices;
+            dataDate = date;
+          });
+        }
 
         return true;
       }
@@ -234,9 +253,11 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   void _addToCart(String product, int quantity) async {
-    setState(() {
-      cart[product] = (cart[product] ?? 0) + quantity;
-    });
+    if (mounted) {
+      setState(() {
+        cart[product] = (cart[product] ?? 0) + quantity;
+      });
+    }
 
     SharedPreferences prefs = await SharedPreferences.getInstance();
     prefs.setString("cart", jsonEncode(cart));
@@ -251,9 +272,11 @@ class _HomeScreenState extends State<HomeScreen> {
     String? cartData = prefs.getString("cart");
 
     if (cartData != null) {
-      setState(() {
-        cart = Map<String, int>.from(jsonDecode(cartData));
-      });
+      if (mounted) {
+        setState(() {
+          cart = Map<String, int>.from(jsonDecode(cartData));
+        });
+      }
     }
   }
 
@@ -346,7 +369,7 @@ class _HomeScreenState extends State<HomeScreen> {
         String produce = producePrices.keys.elementAt(index);
         var priceData = producePrices[produce];
         String imagePath = produceImages[produce] ??
-            "assets/images/default.png"; // Default image
+            "https://farmzoassets.crazoo.me/default.png"; // Default image
 
         // Ensure `max_price` is properly handled
         double? price = priceData?['max_price'] != null
@@ -361,7 +384,7 @@ class _HomeScreenState extends State<HomeScreen> {
           margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           child: ListTile(
             contentPadding: const EdgeInsets.all(10),
-            leading: Image.asset(imagePath,
+            leading: Image.network(imagePath,
                 width: 50, height: 50, fit: BoxFit.cover),
             title: Text(produce,
                 style: const TextStyle(fontWeight: FontWeight.bold)),

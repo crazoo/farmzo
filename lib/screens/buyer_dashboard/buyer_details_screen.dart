@@ -794,9 +794,11 @@ class _BuyerDetailsScreenState extends State<BuyerDetailsScreen> {
   // Save buyer details to Firestore
   Future<void> _saveBuyerDetails() async {
     if (_formKey.currentState!.validate()) {
-      setState(() {
-        _isLoading = true;
-      });
+      if (mounted) {
+        setState(() {
+          _isLoading = true;
+        });
+      }
 
       User? user = _auth.currentUser;
 
@@ -832,9 +834,11 @@ class _BuyerDetailsScreenState extends State<BuyerDetailsScreen> {
         }
       }
 
-      setState(() {
-        _isLoading = false;
-      });
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
     }
   }
 
@@ -878,10 +882,12 @@ class _BuyerDetailsScreenState extends State<BuyerDetailsScreen> {
                       items: _indiaStatesAndDistricts.keys.toList(),
                       selectedValue: _selectedState,
                       onChanged: (newState) {
-                        setState(() {
-                          _selectedState = newState;
-                          _selectedDistrict = null;
-                        });
+                        if (mounted) {
+                          setState(() {
+                            _selectedState = newState;
+                            _selectedDistrict = null;
+                          });
+                        }
                       },
                     ),
 
@@ -891,9 +897,11 @@ class _BuyerDetailsScreenState extends State<BuyerDetailsScreen> {
                         items: _indiaStatesAndDistricts[_selectedState] ?? [],
                         selectedValue: _selectedDistrict,
                         onChanged: (newDistrict) {
-                          setState(() {
-                            _selectedDistrict = newDistrict;
-                          });
+                          if (mounted) {
+                            setState(() {
+                              _selectedDistrict = newDistrict;
+                            });
+                          }
                         },
                       ),
 
@@ -933,9 +941,11 @@ class _BuyerDetailsScreenState extends State<BuyerDetailsScreen> {
                       items: _businessTypes,
                       selectedValue: _selectedBusinessType,
                       onChanged: (value) {
-                        setState(() {
-                          _selectedBusinessType = value;
-                        });
+                        if (mounted) {
+                          setState(() {
+                            _selectedBusinessType = value;
+                          });
+                        }
                       },
                     ),
 
